@@ -5,15 +5,15 @@
                 <h1 class="display-2 text-dark text-uppercase font-weight-bold font-italic title">Bat Facts</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row fact-row">
             {% for fact in batfact_list %}
-                <div class="col-xl-3 col-lg-4 col-sm-8 mx-auto align-self-center">
+                <div class="col-xl-3 col-lg-4 col-sm-8 mx-auto align-self-top">
                     <div class="card text-center mb-3 bat-fact">
                         <div class="card-header">
                             <h4 class="text-info font-weight-bold">{{ fact.title }}</h4>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <img class="card-img-top embed-responsive-item" src="{{ fact.img.url }}"/>
+                            <img class="card-img-top embed-responsive-item" src="{{ fact.img.url }}" alt="{{ fact.title }}"/>
                         </div>
                         <div class="card-body">
                             <p>{{ fact.fact }}</p>

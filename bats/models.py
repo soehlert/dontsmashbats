@@ -32,13 +32,3 @@ class BatFact(models.Model):
 	@property
 	def short_description(self):
 		return truncatechars(self.fact, 50)
-
-
-class Charity(models.Model):
-	"""A bat related charity"""
-	name = models.CharField(max_length=50, unique=True)
-	url = models.URLField()
-	img = models.ImageField(upload_to='charities/')
-
-	def __str__(self):
-		return f"{self.name}"
