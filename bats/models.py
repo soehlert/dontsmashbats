@@ -26,6 +26,19 @@ class BatFact(models.Model):
 	img = models.ImageField(upload_to='images/')
 	type = models.CharField(max_length=2, choices=fact_types, default=OTHER)
 
+	def __str__(self):
+		return f"{self.title}"
+
 	@property
 	def short_description(self):
 		return truncatechars(self.fact, 50)
+
+
+class Charity(models.Model):
+	"""A bat related charity"""
+	name = models.CharField(max_length=50, unique=True)
+	url = models.URLField()
+	img = models.ImageField(upload_to='charities/')
+
+	def __str__(self):
+		return f"{self.name}"

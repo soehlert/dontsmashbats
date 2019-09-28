@@ -10,7 +10,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-8 mx-auto align-self-center">
                     <div class="card text-center mb-3 bat-fact">
                         <div class="card-header">
-                            <h4>{{ fact.title }}</h4>
+                            <h4 class="text-info font-weight-bold">{{ fact.title }}</h4>
                         </div>
                         <div class="embed-responsive embed-responsive-16by9">
                             <img class="card-img-top embed-responsive-item" src="{{ fact.img.url }}"/>
@@ -19,7 +19,7 @@
                             <p>{{ fact.fact }}</p>
                         </div>
                         <div class="card-footer text-secondary">
-                            <a class="text-info" href="{{ fact.credit }}">{{ fact.credit }}</a>
+                            <a class="text-muted" href="{{ fact.credit }}">{{ fact.credit }}</a>
                         </div>
                     </div>
                 </div>

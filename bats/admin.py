@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import BatFact
+from .models import BatFact, Charity
 
 
 # Register your models here.
@@ -12,3 +12,12 @@ class BatFactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(BatFact, BatFactAdmin)
+
+
+class CharityAdmin(admin.ModelAdmin):
+	model = Charity
+	list_display = ['name', 'url']
+	search_fields = ['name']
+
+
+admin.site.register(Charity, CharityAdmin)
