@@ -1,0 +1,32 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-expand-md navbar-custom navbar-dark fixed-top">
+        <a href="{% url 'bats-home' %}" class="navbar-brand h1">
+            <img class="d-inline-block img-responsive rounded-circle mr-2" height="60" src="{% static 'profile.png' %}" alt="Leave bats alone">
+            <span class="text-uppercase align-middle" id="brand-span">Don't Smash Bats</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 text-light active menu-item">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#facts" class="nav-link m-2 text-light menu-item">Facts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 text-light menu-item">Charities</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div class="text-md-right text-center text-light banner">
+        <h1 class="display4 text-uppercase banner-heading">Start Not Smashing Bats</h1>
+        <p class="lead banner-par">Learn why you shouldn't smash them</p>
+    </div>
+
+</header>
