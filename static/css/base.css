@@ -79,8 +79,8 @@ span {
 
 .fact-row {
     animation-name: fromRight;
-    animation-duration: 1s;
-    animation-delay: 5s;
+    animation-duration: 4s;
+    animation-delay: 2s;
 }
 @keyframes fromRight {
     0% {
