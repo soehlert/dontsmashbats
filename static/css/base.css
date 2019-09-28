@@ -65,19 +65,22 @@ span {
 }
 /* end of navbar */
 
-/* bat facts */
+/* title */
 .title {
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
+/* end of title */
+
+/* bat facts */
 .embed-responsive .card-img-top {
     object-fit: cover;
 }
 
 .fact-row {
     animation-name: fromRight;
-    animation-duration: 3s;
-    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-delay: 5s;
 }
 @keyframes fromRight {
     0% {
