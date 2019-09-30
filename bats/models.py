@@ -21,7 +21,7 @@ class BatFact(models.Model):
 		(OTHER, 'Other')
 	]
 
-	fact = models.TextField(max_length=300, unique=True)
+	fact = models.TextField(max_length=750, unique=True)
 	title = models.CharField(max_length=75, null=True)
 	date_added = models.DateField(auto_now_add=True)
 	credit = models.URLField()
