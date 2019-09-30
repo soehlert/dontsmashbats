@@ -1,0 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url("../cover.png") no-repeat center center /cover;
+    margin-top: 50px;
+    clip-path: polygon(0 -10%, 100% -10%, 100% 90%, 0 100%);
+}
+/* banner */
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+}
+.banner-heading {
+    font-size: 3.5em;
+    animation-name: anim;
+    animation-duration: 2s;
+}
+.banner-par {
+    font-size: 2em;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+@keyframes anim {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* end of banner */
+
+/* navbar */
+/* for brand name*/
+span {
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+}
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-custom {
+    background: #101a42 linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
+    padding: 10px;
+}
+.menu-item {
+    font-size: 13px;
+    transition: color .5s;
+}
+/* end of navbar */
+
+/* title */
+.title {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+/* end of title */
+
+/* bat facts */
+.embed-responsive .card-img-top {
+    object-fit: cover;
+}
+
+.fact-row {
+    animation-name: fromRight;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+@keyframes fromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+/* end of bat facts */
+
+/* carousel */
+.charities {
+    background: #3E3D3C;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, -800% 100%);
+}
+.carousel-caption {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.carousel-item {
+    height: 100%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+.carousel-link {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+/* end of carousel */
+
+/* footer */
+.footer-custom {
+    background: #12151d;
+}
