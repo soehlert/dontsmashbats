@@ -1,7 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import truncatechars
+from django.db.models.signals import pre_delete
 
-from cloudinary.models import CloudinaryField
+import cloudinary
 
 
 # Create your models here.
@@ -25,7 +26,7 @@ class BatFact(models.Model):
 	title = models.CharField(max_length=75, null=True)
 	date_added = models.DateField(auto_now_add=True)
 	credit = models.URLField()
-	img = CloudinaryField('img')
+	img = cloudinary.CloudinaryImage('img')
 	type = models.CharField(max_length=2, choices=fact_types, default=OTHER)
 
 	def __str__(self):
@@ -34,3 +35,7 @@ class BatFact(models.Model):
 	@property
 	def short_description(self):
 		return truncatechars(self.fact, 50)
+
+	@receiver(pre_delete, sender=BatFact)
+	def photo_delete(sender, instance, **kwargs):
+		cloudinary.uploader.destroy(instance.img.public_id)
