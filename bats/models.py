@@ -1,6 +1,8 @@
 from django.db import models
 from django.template.defaultfilters import truncatechars
 
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class BatFact(models.Model):
@@ -23,7 +25,7 @@ class BatFact(models.Model):
 	title = models.CharField(max_length=75, null=True)
 	date_added = models.DateField(auto_now_add=True)
 	credit = models.URLField()
-	img = models.ImageField(upload_to='images/')
+	img = CloudinaryField('img')
 	type = models.CharField(max_length=2, choices=fact_types, default=OTHER)
 
 	def __str__(self):
