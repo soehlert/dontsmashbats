@@ -80,7 +80,7 @@ span {
 .fact-row {
     animation-name: fromRight;
     animation-duration: 4s;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 @keyframes fromRight {
     0% {
