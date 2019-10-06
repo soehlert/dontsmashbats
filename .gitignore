@@ -1,5 +1,6 @@
 venv/*
 .idea/*
 db.sqlite3
+staticfiles/*
 *.pyc
 bats/__pycache__/*.pyc
