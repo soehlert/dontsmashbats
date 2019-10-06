@@ -1,4 +1,7 @@
+from django.http import HttpResponse
 from django.views.generic import ListView
+
+from dontsmashbats import settings
 from .models import BatFact
 
 
@@ -10,3 +13,7 @@ class HomeView(ListView):
 
     def get_queryset(self):
         return BatFact.objects.all()
+
+
+def acme_challenge(request):
+    return HttpResponse(settings.ACME_CHALLENGE_CONTENT)
