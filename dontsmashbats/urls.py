@@ -26,7 +26,3 @@ urlpatterns = [
     url(r'^.well-known/acme-challenge/.*$', views.acme_challenge, name='acme-challenge'),
     path('', include('bats.urls'), name='concerts'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-# Only acceptable in debug mode
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
