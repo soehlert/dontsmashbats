@@ -1,6 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import truncatechars
-from django.db.models.signals import pre_delete
+from PIL import Image as Img
 
 
 # Create your models here.
@@ -11,7 +11,6 @@ class BatFact(models.Model):
 	SPECIES = 'SP'
 	COMMUNITY = 'CO'
 	OTHER = 'OT'
-
 	fact_types = [
 		(FLIGHT, 'Flight'),
 		(SLEEP, 'Sleep'),
@@ -33,3 +32,14 @@ class BatFact(models.Model):
 	@property
 	def short_description(self):
 		return truncatechars(self.fact, 50)
+
+	def save(self):
+		if not self.img:
+			return
+
+		super(BatFact, self).save()
+		image = Img.open(self.img)
+		(width, height) = image.size
+		size = (300, 300)
+		image = image.resize(size, Img.ANTIALIAS)
+		image.save(self.img.path)

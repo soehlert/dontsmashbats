@@ -73,7 +73,7 @@ span {
 /* end of title */
 
 /* bat facts */
-.embed-responsive .card-img-top {
+.embed-responsive {
     object-fit: cover;
 }
 

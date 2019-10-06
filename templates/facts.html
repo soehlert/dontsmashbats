@@ -1,28 +1,27 @@
 <section class="facts p-5" id="facts">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center py-5">
-                <h1 class="display-2 text-dark text-uppercase font-weight-bold font-italic title">Bat Facts</h1>
-            </div>
+    <div class="row">
+        <div class="col text-center py-5">
+            <h1 class="display-4 text-dark text-uppercase font-weight-bold font-italic title">Bat Facts</h1>
         </div>
-        <div class="row fact-row">
-            {% for fact in batfact_list %}
-                <div class="col-xl-3 col-lg-4 col-sm-8 mx-auto align-self-top">
-                    <div class="card card-hover text-center mb-3 bat-fact">
-                        <div class="card-header">
-                            <h4 class="text-info font-weight-bold">{{ fact.title }}</h4>
-                        </div>
-                        <div class="embed-responsive embed-responsive-16by9">
-                        </div>
-                        <div class="card-body">
-                            <p>{{ fact.fact }}</p>
-                        </div>
-                        <div class="card-footer text-secondary">
-                            <a class="text-muted" href="{{ fact.credit }}">{{ fact.credit }}</a>
-                        </div>
+    </div>
+    <div class="row fact-row">
+        {% for fact in batfact_list %}
+            <div class="col-xl-3 col-lg-4 col-sm-8 mx-auto align-self-top">
+                <div class="card card-hover mb-3 text-center bat-fact">
+                    <div class="card-header">
+                        <h4 class="text-info font-weight-bold">{{ fact.title }}</h4>
+                    </div>
+                    <div class="embed-responsive">
+                        <img class="rounded mt-1" src="{{ fact.img.url }}"/>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ fact.fact }}</p>
+                    </div>
+                    <div class="card-footer text-secondary">
+                        <a class="text-muted" href="{{ fact.credit }}">{{ fact.credit }}</a>
                     </div>
                 </div>
-            {%  endfor %}
-        </div>
+            </div>
+        {%  endfor %}
     </div>
 </section>
