@@ -1,6 +1,6 @@
 certifi==2019.9.11
 dj-database-url==0.5.0
-Django==2.2.10
+Django==2.2.13
 docutils==0.15.2
 gunicorn==19.9.0
 jmespath==0.9.4
